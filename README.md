@@ -37,7 +37,7 @@ resfun_num  (required if model_type == "square of linear")  number of residue fu
 ````
 
 ### Output
-A class that contains the results of QARSTA and can be called by, e.g., if sol = QARSTA.solve(...) then:
+A class that contains the results of QARSTA and can be called by:
 ````
 sol.x      minimizer obtained by QARSTA
 sol.f      minimum function value obtained by QARSTA
