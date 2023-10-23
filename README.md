@@ -59,7 +59,7 @@ The files in the format of example_XXX.py are some examples of how to use QARSTA
 
 
 ## License 
-All code in QARSTA is released under the GNU GPL license [LICENSE](/LICENSE).  
+All code in QARSTA is released under the GNU GPL [license](/LICENSE).  
 
 
 ## Contact
