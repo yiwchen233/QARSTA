@@ -1,4 +1,5 @@
 # QARSTA -- Quadratic Approximated Random Subspace Trust-region Algorithm
+![GitHub](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
 
 ## Citation
 TO BE ADDED
@@ -54,7 +55,7 @@ All code in QARSTA is released under the GNU GPL license [LICENSE](/LICENSE).
 
 
 ## Contact
-Please contact us via email to report any issues
+Please contact us via email to report any issues:
 ```sh
 yiwchen@student.ubc.ca
 ```
