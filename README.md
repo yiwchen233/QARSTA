@@ -6,6 +6,7 @@ This is the souce code of the Quadratic Approximated Random Subspace Trust-regio
 * underdetermined quadratic interpolation model
 * linear interpolation model
 * square of linear interpolation model (can only be constructed when the objective function has the structure of sum-of-square)
+
 For detailed explaination, please see CITE.
 
 ## Citation
