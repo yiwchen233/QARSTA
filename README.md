@@ -5,7 +5,9 @@ TO BE ADDED
 
 ## Installation
 
-TO BE ADDED
+```sh
+git clone https://github.com/yiwchen233/QARSTA
+```
   
 ## License 
 
