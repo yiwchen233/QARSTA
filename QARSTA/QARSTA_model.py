@@ -1,7 +1,7 @@
 import numpy as np
 import scipy.linalg as linalg
 
-from .qarsta_exit_info import *
+from .QARSTA_exit_info import *
 from .tools import gen_random_directions, eval_objective
 
 __all__ = ['SampleSet']

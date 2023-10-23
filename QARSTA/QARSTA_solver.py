@@ -7,9 +7,9 @@ min f(x).
 
 import numpy as np
 
-from .qarsta_exit_info import *
-from .qarsta_model import *
-from .qarsta_parameters import ParameterList
+from .QARSTA_exit_info import *
+from .QARSTA_model import *
+from .QARSTA_parameters import ParameterList
 from .trust_region import trsbox
 from .tools import eval_objective, gen_random_directions
 
