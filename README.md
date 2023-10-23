@@ -37,13 +37,16 @@ resfun_num  (required if model_type == "square of linear")  number of residue fu
 ````
 
 ### Output
-A class that contains and can be called by:
+A class that contains the results of QARSTA and can be called by, e.g., if sol = QARSTA.solve(...) then:
 ````
 sol.x      minimizer obtained by QARSTA
 sol.f      minimum function value obtained by QARSTA
 sol.nf     number of function evaluation used
 sol.niter  number of iteration used
 ````
+
+### Examples
+The files in the format of example_XXX.py are some examples of how to use QARSTA, where XXX corresponds to the model construction technique used in the example. 
 
 
 ## License 
