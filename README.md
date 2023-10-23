@@ -19,7 +19,7 @@ git pull
 ## Using QARSTA
 The API of QARSTA is:
 ```sh
-sol = QARSTA.solve(obj, x0, p, prand, rhobeg, rhoend, maxfun, fmin_true, model_type, resfuns, resfun_num)
+sol = QARSTA.solve(obj, x0, p, prand, deltabeg, deltaend, maxfun, fmin_true, model_type, resfuns, resfun_num)
 ```
 
 ### Inputs
@@ -28,8 +28,8 @@ obj         (required)  objective function
 x0          (required)  starting point
 p           (required)  full subspace dimension
 prand       (required)  minimum randomized subspace dimension
-rhobeg      (optional)  initial trust-region radius
-rhoend      (optional)  minimum trust-region radius
+deltabeg    (optional)  initial trust-region radius
+deltaend    (optional)  minimum trust-region radius
 maxfun      (optional)  maximum number of function evaluations
 model_type  (optional)  model construction technique (must be one of "quadratic", "underdetermined quadratic", "linear", or "square of linear")
 resfuns     (required if model_type == "square of linear")  residue functions
@@ -39,9 +39,9 @@ resfun_num  (required if model_type == "square of linear")  number of residue fu
 ### Output
 A class that contains and can be called by:
 ````
-sol.x   minimizer obtained by QARSTA
-sol.f   minimum function value obtained by QARSTA
-sol.nf  number of function evaluation used
+sol.x      minimizer obtained by QARSTA
+sol.f      minimum function value obtained by QARSTA
+sol.nf     number of function evaluation used
 sol.niter  number of iteration used
 ````
 

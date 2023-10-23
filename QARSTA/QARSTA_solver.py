@@ -70,7 +70,7 @@ def construct_sample_set(model, p, delta, objfun, nf, maxfun, params, fmin_true)
     return exit_info, model, nf
 
 
-def solve_main(objfun, x0, rhobeg, rhoend, maxfun, params, p, prand, fmin_true=None, model_type="quadratic", resfuns=None, resfun_num=None):
+def solve_main(objfun, x0, deltabeg, deltaend, maxfun, params, p, prand, fmin_true=None, model_type="quadratic", resfuns=None, resfun_num=None):
 
     exit_info = None
     
@@ -84,7 +84,7 @@ def solve_main(objfun, x0, rhobeg, rhoend, maxfun, params, p, prand, fmin_true=N
         return x0, f0, nf, 0, exit_info
 
     # Initialize model
-    delta = rhobeg
+    delta = deltabeg
     model = SampleSet(p, prand, x0, f0, rel_tol=params("model.rel_tol"))
     exit_info, nf = model.initialise_sample_set(delta, objfun, nf, maxfun, fmin_true=fmin_true)
 
@@ -124,8 +124,8 @@ def solve_main(objfun, x0, rhobeg, rhoend, maxfun, params, p, prand, fmin_true=N
         norm_gk = np.linalg.norm(gk)
         if params("general.criticality_step_mu") * norm_gk < delta:
             delta = params("tr_radius.gamma_dec") * delta
-            if delta <= rhoend:
-                exit_info = ExitInformation(EXIT_SUCCESS, "delta has reached rhoend")
+            if delta <= deltaend:
+                exit_info = ExitInformation(EXIT_SUCCESS, "delta has reached deltaend")
                 break  # quit
 
             # Shrink all directions
@@ -188,8 +188,8 @@ def solve_main(objfun, x0, rhobeg, rhoend, maxfun, params, p, prand, fmin_true=N
         # Update trust region radius
         delta = update_tr(delta, ratio, norm_sk, params)
 
-        if delta <= rhoend:
-            exit_info = ExitInformation(EXIT_SUCCESS, "delta has reached rhoend")
+        if delta <= deltaend:
+            exit_info = ExitInformation(EXIT_SUCCESS, "delta has reached deltaend")
             break  # quit
 
         # Add xnew to sample set
@@ -268,7 +268,7 @@ def solve_main(objfun, x0, rhobeg, rhoend, maxfun, params, p, prand, fmin_true=N
     return xiter, fiter, nf, current_iter, exit_info
 
 
-def solve(objfun, x0, p, prand, rhobeg=None, rhoend=1e-8, maxfun=None, fmin_true=None, model_type="quadratic", resfuns=None, resfun_num=None):
+def solve(objfun, x0, p, prand, deltabeg=None, deltaend=1e-8, maxfun=None, fmin_true=None, model_type="quadratic", resfuns=None, resfun_num=None):
 
     n = len(x0)
     assert model_type == "quadratic" or model_type == "underdetermined quadratic" or model_type == "linear" or model_type == "square of linear", "Model type must be quadratic/underdetermined quadratic/linear/square of linear"
@@ -277,8 +277,8 @@ def solve(objfun, x0, p, prand, rhobeg=None, rhoend=1e-8, maxfun=None, fmin_true
     assert 1 <= p <= n, "p must be in [1..n]"
     assert 1 <= prand <= p, "prand must be in [1..p]"
 
-    if rhobeg is None:
-        rhobeg = 0.1 * max(np.max(np.abs(x0)), 1.0)
+    if deltabeg is None:
+        deltabeg = 0.1 * max(np.max(np.abs(x0)), 1.0)
     if maxfun is None:
         maxfun = 1e5
 
@@ -287,12 +287,12 @@ def solve(objfun, x0, p, prand, rhobeg=None, rhoend=1e-8, maxfun=None, fmin_true
 
     exit_info = None
     # Input & parameter checks
-    if exit_info is None and rhobeg < 0.0:
-        exit_info = ExitInformation(EXIT_INPUT_ERROR, "rhobeg must be strictly positive")
-    if exit_info is None and rhoend < 0.0:
-        exit_info = ExitInformation(EXIT_INPUT_ERROR, "rhoend must be strictly positive")
-    if exit_info is None and rhobeg <= rhoend:
-        exit_info = ExitInformation(EXIT_INPUT_ERROR, "rhobeg must be > rhoend")
+    if exit_info is None and deltabeg < 0.0:
+        exit_info = ExitInformation(EXIT_INPUT_ERROR, "deltabeg must be strictly positive")
+    if exit_info is None and deltaend < 0.0:
+        exit_info = ExitInformation(EXIT_INPUT_ERROR, "deltaend must be strictly positive")
+    if exit_info is None and deltabeg <= deltaend:
+        exit_info = ExitInformation(EXIT_INPUT_ERROR, "deltabeg must be > deltaend")
     if exit_info is None and maxfun <= 0:
         exit_info = ExitInformation(EXIT_INPUT_ERROR, "maxfun must be strictly positive")
     if exit_info is None and np.shape(x0) != (n,):
@@ -311,7 +311,7 @@ def solve(objfun, x0, p, prand, rhobeg=None, rhoend=1e-8, maxfun=None, fmin_true
         return results
 
     # Call main solver
-    xmin, fmin, nf, niter, exit_info = solve_main(objfun, x0, rhobeg, rhoend, maxfun, params, p, prand, fmin_true=fmin_true, model_type=model_type, resfuns=resfuns, resfun_num=resfun_num)
+    xmin, fmin, nf, niter, exit_info = solve_main(objfun, x0, deltabeg, deltaend, maxfun, params, p, prand, fmin_true=fmin_true, model_type=model_type, resfuns=resfuns, resfun_num=resfun_num)
 
     # Process final return values & package up
     exit_flag = exit_info.flag

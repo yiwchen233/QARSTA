@@ -1,7 +1,7 @@
 __all__ = ['EXIT_MAXFUN_WARNING', 'EXIT_SUCCESS', 'EXIT_INPUT_ERROR', 'EXIT_TR_INCREASE_ERROR', 'EXIT_LINALG_ERROR', 'ExitInformation', 'OptimResults']
 
 EXIT_MAXFUN_WARNING = 1  # warning, reached max function evals
-EXIT_SUCCESS = 0  # successful finish (rho=rhoend, sufficient objective reduction, or everything in noise level)
+EXIT_SUCCESS = 0  # successful finish (delta=deltaend, sufficient objective reduction, or everything in noise level)
 EXIT_INPUT_ERROR = -1  # error, bad inputs
 EXIT_TR_INCREASE_ERROR = -2  # error, trust region step increased model value
 EXIT_LINALG_ERROR = -3  # error, linalg error (singular matrix encountered)
