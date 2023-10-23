@@ -1,11 +1,18 @@
 # QARSTA -- Quadratic Approximated Random Subspace Trust-region Algorithm
 ![GitHub](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
 
+This is the souce code of the Quadratic Approximated Random Subspace Trust-region Algorithm (QARSTA) proposed in CITE.  QARSTA is a Python package originally designed for large-scale determined unconstrained optimization problems where the derivative information is not available.  This algorithm does not require any special structure of the objective function and is currently able to construct four types of surrogate models:
+* quadratic interpolation model  
+* underdetermined quadratic interpolation model
+* linear interpolation model
+* square of linear interpolation model (can only be constructed when the objective function has the structure of sum-of-square)
+For detailed explaination, please see CITE.
+
 ## Citation
 TO BE ADDED
 
 
-## Installation
+## Installation & Updating
 To install QARSTA, please download from Github:
 ```sh
 git clone https://github.com/yiwchen233/QARSTA
