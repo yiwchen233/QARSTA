@@ -1,13 +1,13 @@
 # QARSTA -- Quadratic Approximated Random Subspace Trust-region Algorithm
 ![GitHub](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
 
-This is the souce code of the Quadratic Approximated Random Subspace Trust-region Algorithm (QARSTA) proposed in CITE.  QARSTA is a Python package originally designed for large-scale determined unconstrained optimization problems where the derivative information is not available.  This algorithm does not require any special structure of the objective function and is currently able to construct four types of surrogate models:
-* quadratic interpolation model  
+This is the source code of the Quadratic Approximated Random Subspace Trust-region Algorithm (QARSTA) proposed in CITE.  QARSTA is a Python package originally designed for large-scale determined unconstrained optimization problems where the derivative information is unavailable.  This algorithm does not require any special structure of the objective function and is currently able to construct four types of surrogate models:
+* determined quadratic interpolation model  
 * underdetermined quadratic interpolation model
 * linear interpolation model
 * square of linear interpolation model (can only be constructed when the objective function has the structure of sum-of-square)
 
-For detailed explaination, please see CITE.
+For a detailed explanation, please see CITE.
 
 ## Citation
 TO BE ADDED
@@ -19,7 +19,7 @@ To install QARSTA, please download from Github:
 git clone https://github.com/yiwchen233/QARSTA
 ```
 
-To update to the latest version, please go to the top level directory and do:
+To update to the latest version, please go to the top-level directory and do the following:
 ```sh
 git pull
 ```
@@ -50,8 +50,8 @@ A class that contains the results of QARSTA and can be called by:
 ````
 sol.x      minimizer obtained by QARSTA
 sol.f      minimum function value obtained by QARSTA
-sol.nf     number of function evaluation used
-sol.niter  number of iteration used
+sol.nf     number of function evaluations used
+sol.niter  number of iterations used
 ````
 
 ### Examples
