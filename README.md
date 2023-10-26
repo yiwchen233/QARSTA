@@ -32,7 +32,7 @@ sol = QARSTA.solve(obj, x0, p, prand, deltabeg, deltaend, maxfun, fmin_true, mod
 ```
 
 ### Inputs
-```
+```math
 obj         (required)  objective function
 x0          (required)  starting point
 p           (required)  full subspace dimension
@@ -43,16 +43,16 @@ maxfun      (optional, default $10^5$)  maximum number of function evaluations
 model_type  (optional, default "quadratic")  model construction technique (must be one of "quadratic", "underdetermined quadratic", "linear", or "square of linear")
 resfuns     (required if model_type == "square of linear", default None)  residue functions
 resfun_num  (required if model_type == "square of linear", default None)  number of residue functions
-```
+```math
 
 ### Output
 A class that contains the results of QARSTA and can be called by:
-````
+```
 sol.x      minimizer obtained by QARSTA
 sol.f      minimum function value obtained by QARSTA
 sol.nf     number of function evaluations used
 sol.niter  number of iterations used
-````
+```
 
 ### Examples
 The files in the format of example_XXX.py are some examples of how to use QARSTA, where XXX corresponds to the model construction technique used in the example. 
