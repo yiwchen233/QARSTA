@@ -64,6 +64,6 @@ All code in QARSTA is released under the GNU GPL [license](/LICENSE).
 
 ## Contact
 Please contact us via email to report any issues:
-```sh
+```
 yiwchen@student.ubc.ca
 ```
