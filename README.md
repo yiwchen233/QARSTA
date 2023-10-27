@@ -37,11 +37,7 @@ obj         (required)  objective function
 x0          (required)  starting point
 p           (required)  full subspace dimension
 prand       (required)  minimum randomized subspace dimension
-deltabeg    (optional, default 
-```{math}
-0.1\max(\|x0\|_\infty, 1.0)
-```
-)  initial trust-region radius
+deltabeg    (optional, default 0.1\max(\|x0\|_\infty, 1.0))  initial trust-region radius
 deltaend    (optional, default 10^{-8})  minimum trust-region radius
 maxfun      (optional, default 10^5)  maximum number of function evaluations
 model_type  (optional, default "quadratic")  model construction technique (must be one of "quadratic", "underdetermined quadratic", "linear", or "square of linear")
