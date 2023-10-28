@@ -1,6 +1,7 @@
+```
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js" integrity="sha384-cZq6Qjw9lsK54/PDWfBA9RqHqw9Ob3m8gIN8C5Xcg6cuZxNNIw9dEhqPqL9a0hBn" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" integrity="sha384-rprNz+vgSSdsLa0f8fFSC1bJRqBxIV2lw9mgbU4u9WpPefnp7+3Ie1GjE2F79D6J" crossorigin="anonymous"
-
+```
 # QARSTA -- Quadratic Approximated Random Subspace Trust-region Algorithm
 ![GitHub](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
 
