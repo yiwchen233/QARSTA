@@ -12,7 +12,7 @@ For a detailed explanation, please see CITE.
 ## Citation
 TO BE ADDED
 
-heeeekiiii booo  ```math$\gamma$```
+
 ## Installation & Updating
 To install QARSTA, please download from Github:
 ```sh
@@ -31,17 +31,23 @@ The API of QARSTA is:
 sol = QARSTA.solve(obj, x0, p, prand, deltabeg, deltaend, maxfun, fmin_true, model_type, resfuns, resfun_num)
 ```
 
+```latex
+bbbb : '$$E=MC^2$$'
+```
 ### Inputs
-> obj         (required)  objective function
-> x0          (required)  starting point
-> p           (required)  full subspace dimension
-> prand       (required)  minimum randomized subspace dimension
+```
+obj         (required)  objective function
+x0          (required)  starting point
+p           (required)  full subspace dimension
+prand       (required)  minimum randomized subspace dimension
 deltabeg    (optional, default 0.1\max(\|x0\|_\infty, 1.0))  initial trust-region radius
 deltaend    (optional, default 10^{-8})  minimum trust-region radius
 maxfun      (optional, default 10^5)  maximum number of function evaluations
 model_type  (optional, default "quadratic")  model construction technique (must be one of "quadratic", "underdetermined quadratic", "linear", or "square of linear")
 resfuns     (required if model_type == "square of linear", default None)  residue functions
 resfun_num  (required if model_type == "square of linear", default None)  number of residue functions
+```
+
 
 
 ### Output
