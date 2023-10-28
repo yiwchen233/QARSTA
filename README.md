@@ -1,7 +1,3 @@
-```
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js" integrity="sha384-cZq6Qjw9lsK54/PDWfBA9RqHqw9Ob3m8gIN8C5Xcg6cuZxNNIw9dEhqPqL9a0hBn" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" integrity="sha384-rprNz+vgSSdsLa0f8fFSC1bJRqBxIV2lw9mgbU4u9WpPefnp7+3Ie1GjE2F79D6J" crossorigin="anonymous"
-```
 # QARSTA -- Quadratic Approximated Random Subspace Trust-region Algorithm
 ![GitHub](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
 
@@ -41,9 +37,9 @@ obj         (required)  objective function
 x0          (required)  starting point
 p           (required)  full subspace dimension
 prand       (required)  minimum randomized subspace dimension
-deltabeg    (optional, default $0.1\max(\|x0\|_\infty, 1.0)$)  initial trust-region radius
-deltaend    (optional, default $10^{-8}$)  minimum trust-region radius
-maxfun      (optional, default $10^5$)  maximum number of function evaluations
+deltabeg    (optional, default 0.1\max(\|x0\|_\infty, 1.0))  initial trust-region radius
+deltaend    (optional, default 10^{-8})  minimum trust-region radius
+maxfun      (optional, default 10^5)  maximum number of function evaluations
 model_type  (optional, default "quadratic")  model construction technique (must be one of "quadratic", "underdetermined quadratic", "linear", or "square of linear")
 resfuns     (required if model_type == "square of linear", default None)  residue functions
 resfun_num  (required if model_type == "square of linear", default None)  number of residue functions
