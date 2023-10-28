@@ -13,7 +13,7 @@ For a detailed explanation, please see CITE.
 TO BE ADDED
 
 ```latex
-heeeekiiii
+heeeekiiii $\gamma$
 ```
 ## Installation & Updating
 To install QARSTA, please download from Github:
