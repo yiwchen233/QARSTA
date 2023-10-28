@@ -9,6 +9,7 @@ This is the source code of the Quadratic Approximated Random Subspace Trust-regi
 
 For a detailed explanation, please see CITE.
 
+
 ## Citation
 TO BE ADDED
 
@@ -31,9 +32,7 @@ The API of QARSTA is:
 sol = QARSTA.solve(obj, x0, p, prand, deltabeg, deltaend, maxfun, fmin_true, model_type, resfuns, resfun_num)
 ```
 
-```latex
-bbbb : '$$E=MC^2$$'
-```
+
 ### Inputs
 ```
 obj         (required)  objective function
@@ -49,7 +48,6 @@ resfun_num  (required if model_type == "square of linear", default None)  number
 ```
 
 
-
 ### Output
 A class that contains the results of QARSTA and can be called by:
 ```
@@ -58,6 +56,7 @@ sol.f      minimum function value obtained by QARSTA
 sol.nf     number of function evaluations used
 sol.niter  number of iterations used
 ```
+
 
 ### Examples
 The files in the format of example_XXX.py are some examples of how to use QARSTA, where XXX corresponds to the model construction technique used in the example. 
