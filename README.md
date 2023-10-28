@@ -12,7 +12,7 @@ For a detailed explanation, please see CITE.
 ## Citation
 TO BE ADDED
 
-```latex
+```math
 heeeekiiii $\gamma$
 ```
 ## Installation & Updating
