@@ -12,9 +12,7 @@ For a detailed explanation, please see CITE.
 ## Citation
 TO BE ADDED
 
-```math
-heeeekiiii $\gamma$
-```
+heeeekiiii booo  ```math$\gamma$```
 ## Installation & Updating
 To install QARSTA, please download from Github:
 ```sh
