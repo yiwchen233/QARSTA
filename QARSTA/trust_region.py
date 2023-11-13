@@ -10,7 +10,7 @@ import numpy as np
 from .tools import sumsq
 
 
-__all__ = ['trsbox', 'trsbox_geometry']
+__all__ = ['trsbox']
 
 ZERO_THRESH = 1e-14
 
@@ -391,21 +391,3 @@ def trsbox_linear(g, a, b, Delta):
             x[idx_hit] = b[idx_hit] if hit_upper else a[idx_hit]  # force boundary exactly
             dirn[idx_hit] = 0.0  # no more searching this direction
     return x
-
-
-def trsbox_geometry(xbase, c, g, lower, upper, Delta):
-    # Given a Lagrange polynomial defined by: L(x) = c + g' * (x - xbase)
-    # Maximise |L(x)| in a box + trust region - that is, solve:
-    #   max_x  abs(c + g' * (x - xbase))
-    #    s.t.  lower <= x <= upper
-    #          ||x-xbase|| <= Delta
-    # Setting s = x-xbase (or x = xbase + s), this is equivalent to:
-    #   max_s  abs(c + g' * s)
-    #   s.t.   lower - xbase <= s <= upper - xbase
-    #          ||s|| <= Delta
-    smin = trsbox_linear(g, lower - xbase, upper - xbase, Delta)  # minimise g' * s
-    smax = trsbox_linear(-g, lower - xbase, upper - xbase, Delta)  # maximise g' * s
-    if abs(c + np.dot(g, smin)) >= abs(c + np.dot(g, smax)):  # choose the one with largest absolute value
-        return xbase + smin
-    else:
-        return xbase + smax
