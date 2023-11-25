@@ -14,6 +14,14 @@ For a detailed explanation, please see CITE.
 TO BE ADDED
 
 
+## Requirements
+QARSTA requires Python 3.11.6 or above, with the following python packages:
+```
+numpy >= 1.24.2
+scipy >= 1.10.1
+```
+
+
 ## Installation & Updating
 To install QARSTA, please download from Github:
 ```sh
