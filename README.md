@@ -23,7 +23,7 @@ SciPy >= 1.10.1
 
 
 ## Installation & Updating
-To install QARSTA, please download from Github:
+To install QARSTA, please download from Github by either downloading the ZIP file or using the follwing command:
 ```sh
 git clone https://github.com/yiwchen233/QARSTA
 ```
