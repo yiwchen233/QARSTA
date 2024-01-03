@@ -7,7 +7,7 @@ This is the source code of the Quadratic Approximation Random Subspace Trust-reg
 * linear interpolation model (using $n+1$ sample points)  
 * square of linear interpolation model (using $n+1$ sample points, can only be constructed when the objective function has the structure of sum-of-square)
 
-For a detailed explanation, please see: Y. Chen, W. Hare, and A. Wiebe, Q-fully quadratic modeling and its application in a random subspace derivative-free method, 2023 [preprint](https://arxiv.org/abs/2312.03169).
+For a detailed explanation, please see: Y. Chen, W. Hare, and A. Wiebe, Q-fully quadratic modeling and its application in a random subspace derivative-free method, 2023, [arxiv preprint](https://arxiv.org/abs/2312.03169).
 
 
 ## Citation
