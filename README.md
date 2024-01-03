@@ -11,7 +11,7 @@ For a detailed explanation, please see: Y. Chen, W. Hare, and A. Wiebe, Q-fully 
 
 
 ## Citation
-If you use our code in your research, please cite:
+If you use our code in your research, then please cite:
 ```
 @article{chen2023qfully,
   title={{$Q$}-fully Quadratic Modeling and its Application in a Random Subspace Derivative-free Method}, 
