@@ -1,13 +1,13 @@
 # QARSTA -- Quadratic Approximation Random Subspace Trust-region Algorithm
 ![GitHub](https://img.shields.io/badge/License-GPL%20v3-blue.svg)
 
-This is the source code of the Quadratic Approximation Random Subspace Trust-region Algorithm (QARSTA) proposed in our paper [preprint](https://arxiv.org/abs/2312.03169).  QARSTA is a Python package originally designed for large-scale determined unconstrained optimization problems where the derivative information is unavailable.  This algorithm does not require any special structure of the objective function and is currently able to construct four types of surrogate models:
+This is the source code of the Quadratic Approximation Random Subspace Trust-region Algorithm (QARSTA) proposed in our [paper]([https://arxiv.org/abs/2312.03169](https://link.springer.com/article/10.1007/s10589-024-00590-8)).  QARSTA is a Python package originally designed for large-scale determined unconstrained optimization problems where the derivative information is unavailable.  This algorithm does not require any special structure of the objective function and is currently able to construct four types of surrogate models:
 * determined quadratic interpolation model (using $\frac{(n+1)(n+2)}{2}$ sample points)  
 * underdetermined quadratic interpolation model (using $2n+1$ sample points)  
 * linear interpolation model (using $n+1$ sample points)  
 * square of linear interpolation model (using $n+1$ sample points, can only be constructed when the objective function has the structure of sum-of-square)
 
-For a detailed explanation, please see: Y. Chen, W. Hare, and A. Wiebe, $Q$-fully quadratic modeling and its application in a random subspace derivative-free method, Computational Optimization and Applications (2024), [link](https://link.springer.com/article/10.1007/s10589-024-00590-8)
+For a detailed explanation, please see: Y. Chen, W. Hare, and A. Wiebe, $Q$-fully quadratic modeling and its application in a random subspace derivative-free method, Computational Optimization and Applications (2024)
 
 
 ## Citation
