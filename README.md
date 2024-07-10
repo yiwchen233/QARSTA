@@ -13,11 +13,13 @@ For a detailed explanation, please see: Y. Chen, W. Hare, and A. Wiebe, Q-fully 
 ## Citation
 If you use our code in your research, then please cite:
 ```
-@article{chen2023qfully,
-  title={{$Q$}-fully Quadratic Modeling and its Application in a Random Subspace Derivative-free Method}, 
-  author={Yiwen Chen and Warren Hare and Amy Wiebe},
-  year={2023},
-  url = {https://arxiv.org/abs/2312.03169}
+@article{chen2024qfully,
+  title = {{$Q$}-fully Quadratic Modeling and its Application in a Random Subspace Derivative-free Method}, 
+  author = {Yiwen Chen and Warren Hare and Amy Wiebe},
+  journal = {Computational Optimization and Applications},
+  year = {2024},
+  doi = {10.1007/s10589-024-00590-8},
+  url = {https://link.springer.com/article/10.1007/s10589-024-00590-8}
 }
 ```
 
