@@ -1,6 +1,6 @@
 """
 QARSTA: Quadratic Approximation Random Subspace Trust-region Algorithm
-For a given blackbox objective function f with n-dimensional variable x, 
+Given a blackbox objective function f defined over an n-dimensional variable x, 
 this code solves the unconstrained blackbox optimization problem
 min f(x).
 """
