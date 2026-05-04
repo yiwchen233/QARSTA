@@ -385,12 +385,18 @@ class SampleSet(object):
             for k in range(self.p + 1):
                 if k < self.kiter:
                     M_i_trans = np.delete(dirns, k, axis=0)
-                    _, allsigma, _ = np.linalg.svd(M_i_trans.T)
-                    sigmamin[k] = min(allsigma)
+                    if np.size(M_i_trans, 0) == 1:
+                        sigmamin[k] = np.linalg.norm(M_i_trans)
+                    else:
+                        _, allsigma, _ = np.linalg.svd(M_i_trans.T)
+                        sigmamin[k] = min(allsigma)
                 elif k > self.kiter:
                     M_i_trans = np.delete(dirns, k-1, axis=0)
-                    _, allsigma, _ = np.linalg.svd(M_i_trans.T)
-                    sigmamin[k] = min(allsigma)
+                    if np.size(M_i_trans, 0) == 1:
+                        sigmamin[k] = np.linalg.norm(M_i_trans)
+                    else:
+                        _, allsigma, _ = np.linalg.svd(M_i_trans.T)
+                        sigmamin[k] = min(allsigma)
         return sigmamin
     
     # Update index of iterate
